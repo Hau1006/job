@@ -1,11 +1,11 @@
-import "./App.css";
-
+import './App.css'
+import Landing from './pages/Landing'
 function App() {
   return (
-    <div className="App">
-      <h1>con cho ty</h1>
-    </div>
-  );
+    <>
+      <Landing />
+    </>
+  )
 }
 
-export default App;
+export default App

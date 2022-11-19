@@ -1,33 +1,62 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
 In the project directory, you can run:
 
-### `npm start`
+### 1
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+config eslint anf prettier
+create .editorconfig , .prettierignore
+npm i eslint-plugin-prettier
+npm i eslint-config-prettier
+config for package.json : not DONE
+create assets folder
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 2: nomalize.css and global style
 
-### `npm test`
+npm install normalize.css
 
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+### 3: landing page
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- zome level 175
+- install markdown preview extenstion
+- get something on screen
+  react router and styled component right after
+- create gages directory in the source
+- for now Landing.js
+- create component ( snippet extenstion)
+- setup basic retur
+
+### 4: landing structute
+
+- Tip : get dums text : https://hipsum.co/
+  Builds the app for production to the `build` folder.\
+  It correctly bundles React in production mode and optimizes the build for the best performance.
 
 The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### 5: styled comppnent - Basic setup
+
+- Css in js
+- styled Component
+- have logic and styles in component
+- no name collision
+- apply js logic
+  npm i styled-components
+  vscode-styled-components
+
+### 6: styled comppnent - Wrap Component
+
+- keep in mind that only responsible for styling components
+- wrappers folder in assets folder
+
+### Bonus:
+
+- [Coll Image](https://undraw.co/)
+- tách file index.js trong folder component dùng để tránh import nhiều trong file tổng , tách những file nhỏ ra để dễ quản lý hơn
 
 ### `npm run eject`
 
