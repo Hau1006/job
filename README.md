@@ -97,8 +97,13 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 ### 10.2: React Toastify
 
 - npm i react-toastify
-
 - apply Dynamic Object K ey
+
+### 11: User Slice setup
+
+- npm i @reduxjs/toolkit
+- config store, userSlice
+- create UserSlice
 
 If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
