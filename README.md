@@ -76,7 +76,29 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 - setup Routes vs route for app.js
 - connect button register to link
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 9: Error Pages
+
+- create Error Pages
+
+### 10: Create register page
+
+- create Register Pages
+- apply react-hooks-form ( in future versions)
+
+### 10.1: Create FormRow.js
+
+- create FormRow.js
+- Separate component to reuse
+
+### 10.2: Handle change and empty value
+
+- apply Dynamic Object K ey
+
+### 10.2: React Toastify
+
+- npm i react-toastify
+
+- apply Dynamic Object K ey
 
 If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
