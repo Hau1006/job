@@ -60,6 +60,22 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 ### `npm run eject`
 
+### 7: setup Pages
+
+- create Error , Register , Dashboard Pages
+- basic return
+- create index.js
+- import all the pages
+- export one py one
+- basically the same as in components
+- import App.js
+
+### 8: React Router V6
+
+- npm install react-router-dom@6
+- setup Routes vs route for app.js
+- connect button register to link
+
 **Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
 If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.

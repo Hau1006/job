@@ -2,6 +2,6 @@
   "extends": ["react-app", "prettier"],
   "plugins": ["react", "prettier"],
   "rules": {
-    "singleQuote": true
+    // "singleQuote": true
   }
 }
