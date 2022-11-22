@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Wrapper from "../assets/wrappers/RegisterPage";
 import { Logo } from "../components";
 import FormRow from "../components/FormRow";
 import { toast } from "react-toastify";
 import { useDispatch, useSelector } from "react-redux";
 import { loginUser, registerUser } from "../features/user/userActions";
+import { useNavigate } from "react-router-dom";
 //ScreenID: ### 10
 //ScreenID: ### 12
 // initialize state for user
@@ -18,6 +19,7 @@ const Register = () => {
   const [info, setInfo] = useState(initialized);
   const { user, isLoading } = useSelector((store) => store.user);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   // onchange input form
   const handleChange = (e) => {
@@ -42,6 +44,13 @@ const Register = () => {
   const toggleMember = () => {
     setInfo({ ...info, isMember: !info.isMember });
   };
+  useEffect(() => {
+    if (user) {
+      setTimeout(() => {
+        navigate("/");
+      }, 2000);
+    }
+  }, [user]);
   return (
     <Wrapper className="full-page">
       <form className="form" onSubmit={onSubmit}>

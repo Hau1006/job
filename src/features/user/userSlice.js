@@ -6,7 +6,7 @@ import { registerUser, loginUser } from "./userActions";
 // ScreenID: ### 15
 const initialState = {
   isLoading: false,
-  user: getUserFromLocalStorage
+  user: getUserFromLocalStorage()
 };
 const userSlice = createSlice({
   name: "user",
