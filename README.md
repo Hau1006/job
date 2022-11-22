@@ -110,6 +110,24 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 - setup UserSlices
 - create acction in Slice
 
+### 13: HTTP Methods
+
+- GET, POST, PUT, DELETE
+- npm i axios
+
+### 14: API
+
+- root URL -https://course-api.com/
+- https://jobify-prod.herokuapp.com/api/v1/toolkit
+- https://node-course-jobs-api.onrender.com/api-docs/#/
+
+### 15: Custom Axios Instance
+
+- untils/axios.js
+- root URL -https://course-api.com/
+- https://jobify-prod.herokuapp.com/api/v1/toolkit
+- https://node-course-jobs-api.onrender.com/api-docs/#/
+
 If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
 Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
