@@ -1,7 +1,7 @@
 import React from "react";
-
+import Wrapper from "../assets/wrappers/BigSidebar";
 const BigSideBar = () => {
-  return <div>BigSideBar</div>;
+  return <Wrapper>BigSideBar</Wrapper>;
 };
 
 export default BigSideBar;
