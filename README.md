@@ -150,3 +150,23 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 ### 20: Toggle Dropdown
 
 - setup dropdown Logout
+
+### 21: Restrict Access
+
+- create ProtectedRoute page
+
+### 22: Small Sidebar - Setup
+
+- setup SmallSidebar.js
+
+### 23: Setup link
+
+- setup SmallSidebar.js
+
+### 24: Navlink component
+
+- create component/Navlinks.js
+
+### 25: Bigsidebar component
+
+- setup bigsidebar.js

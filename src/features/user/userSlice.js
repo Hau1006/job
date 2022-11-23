@@ -1,6 +1,10 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { toast } from "react-toastify";
-import { addUserToLocalStorage, getUserFromLocalStorage } from "../../utils/localStorage";
+import {
+  addUserToLocalStorage,
+  getUserFromLocalStorage,
+  removeUserFromLocalStorage
+} from "../../utils/localStorage";
 import { registerUser, loginUser } from "./userActions";
 // ScreenID:### 12
 // ScreenID: ### 15
@@ -13,6 +17,11 @@ const userSlice = createSlice({
   name: "user",
   initialState,
   reducers: {
+    logoutUser: (state) => {
+      state.user = null;
+      state.isSidebarOpen = false;
+      removeUserFromLocalStorage();
+    },
     toggleSidebar: (state) => {
       state.isSidebarOpen = !state.isSidebarOpen;
     }
@@ -49,5 +58,5 @@ const userSlice = createSlice({
       });
   }
 });
-export const { toggleSidebar } = userSlice.actions;
+export const { toggleSidebar, logoutUser } = userSlice.actions;
 export default userSlice.reducer;
