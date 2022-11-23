@@ -4,6 +4,7 @@ import { logoutUser, toggleSidebar } from "../features/user/userSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { FaAlignLeft, FaUserCircle, FaCaretDown } from "react-icons/fa";
 import Logo from "./Logo";
+import { debounce } from "../utils/helper";
 const Navbar = () => {
   const [showLogout, setShowLogout] = useState(false);
   const user = useSelector((store) => store.user);
@@ -23,7 +24,10 @@ const Navbar = () => {
           <h3 className="logo-text">Dashboard</h3>
         </div>
         <div className="btn-container">
-          <button type="button" className="btn" onClick={() => setShowLogout(!showLogout)}>
+          <button
+            type="button"
+            className="btn"
+            onClick={debounce(() => setShowLogout(!showLogout), 500)}>
             <FaUserCircle />
             {user?.user?.name}
             <FaCaretDown />

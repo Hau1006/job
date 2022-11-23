@@ -170,3 +170,7 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 ### 25: Bigsidebar component
 
 - setup bigsidebar.js
+
+### BONUS Fuction :
+
+- [Debounce](https://www.joshwcomeau.com/snippets/javascript/debounce/)
