@@ -146,3 +146,7 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 ### 19: Navbar Setup
 
 - Navbar.js
+
+### 20: Toggle Dropdown
+
+- setup dropdown Logout

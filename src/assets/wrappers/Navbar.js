@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 const Wrapper = styled.nav`
   height: var(--nav-height);
@@ -12,8 +12,8 @@ const Wrapper = styled.nav`
     width: 100px;
   }
   .nav-center {
-    display: flex;
     width: 90vw;
+    display: flex;
     align-items: center;
     justify-content: space-between;
   }
@@ -80,5 +80,5 @@ const Wrapper = styled.nav`
       display: block;
     }
   }
-`
-export default Wrapper
+`;
+export default Wrapper;
