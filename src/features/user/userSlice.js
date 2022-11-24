@@ -5,7 +5,7 @@ import {
   getUserFromLocalStorage,
   removeUserFromLocalStorage
 } from "../../utils/localStorage";
-import { registerUser, loginUser } from "./userActions";
+import { registerUser, loginUser, updateUser } from "./userActions";
 // ScreenID:### 12
 // ScreenID: ### 15
 const initialState = {
@@ -53,6 +53,20 @@ const userSlice = createSlice({
         toast.success(`Wellcome back ${user.name}`);
       })
       .addCase(loginUser.rejected, (state, { payload }) => {
+        state.isLoading = false;
+        toast.error(payload);
+      })
+      .addCase(updateUser.pending, (state) => {
+        state.isLoading = true;
+      })
+      .addCase(updateUser.fulfilled, (state, { payload }) => {
+        const { user } = payload;
+        state.isLoading = false;
+        state.user = user;
+        addUserToLocalStorage(user);
+        toast.success(`User Update`);
+      })
+      .addCase(updateUser.rejected, (state, { payload }) => {
         state.isLoading = false;
         toast.error(payload);
       });

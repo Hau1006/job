@@ -174,3 +174,13 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 ### BONUS Fuction :
 
 - [Debounce](https://www.joshwcomeau.com/snippets/javascript/debounce/)
+
+### 26: Profile User Profile
+
+- setup page profile.js
+- create action
+- create update userSlice
+
+### 27: Refactor userSlice
+
+- move userSlice to userThunk : chia nho file , apply method DRY
