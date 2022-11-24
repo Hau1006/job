@@ -5,7 +5,6 @@ import Wrapper from "../../assets/wrappers/DashboardFormPage";
 import FormRow from "../../components/FormRow";
 import { updateUser } from "../../features/user/userActions";
 const Profile = () => {
-  const { log } = console;
   const { user } = useSelector((store) => store);
   const [userData, setUserData] = useState({
     name: user?.user?.name ?? "",
@@ -26,6 +25,7 @@ const Profile = () => {
   const handleChange = (e) => {
     const name = e.target.name;
     const value = e.target.value;
+
     setUserData({ ...userData, [name]: value });
   };
 
@@ -44,7 +44,7 @@ const Profile = () => {
           />
           <FormRow
             type="text"
-            name="location "
+            name="location"
             value={userData.location}
             handleChange={handleChange}
           />

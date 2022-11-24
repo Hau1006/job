@@ -185,6 +185,30 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 - move userSlice to userThunk : chia nho file , apply method DRY
 
+### BONUS: GIT cherry-pick / GIT merge
+
+- successfully
+
 ### 28: Job Slice
 
 - add features jobSlice
+
+### 29: AddJob.js structure
+
+- add input to page addjob
+
+### 30: AddJob.js Selection
+
+- add input to selection
+
+### 30: AddJob.js Selection handleChange Reducer
+
+- add handleChange in reducer
+
+### 31: Change location
+
+- change location user profile page to filed addjob.js
+
+### 32: logout status
+
+- add message when logout was successful
