@@ -184,3 +184,7 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 ### 27: Refactor userSlice
 
 - move userSlice to userThunk : chia nho file , apply method DRY
+
+### 28: Job Slice
+
+- add features jobSlice
