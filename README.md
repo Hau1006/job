@@ -212,3 +212,18 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 ### 32: logout status
 
 - add message when logout was successful
+
+### 33: All jobs
+
+- config allJobsSlice.js
+- create thunks, and action
+
+### 34: Structure all Jobs
+
+- config allJobsSlice.js
+- create thunks, and action
+- create
+- component/SearchContainer.js
+- component/JobsContainer.js
+- component/Job.js
+- import/Export.js
