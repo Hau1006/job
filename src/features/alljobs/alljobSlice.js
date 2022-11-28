@@ -1,13 +1,13 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { toast } from "react-toastify";
-import { allJob, deleteJob, editJob } from "./alljobAction";
+import { allJob, deleteJob, editJob, showStats } from "./alljobAction";
 
 const initialFiltersState = {
   search: "",
   searchStatus: "all",
   searchType: "all",
-  sort: "lastes",
-  sortOptions: ["lastes", "oldest", "a-z", "z-a"]
+  sort: "latest",
+  sortOptions: ["latest", "oldest", "a-z", "z-a"]
 };
 const initialState = {
   isLoading: false,
@@ -28,7 +28,18 @@ const alljobSlice = createSlice({
     },
     hideLoading: (state) => {
       state.isLoading = false;
-    }
+    },
+    handleChange: (state, { payload: { name, value } }) => {
+      state.page = 1;
+      state[name] = value;
+    },
+    clearFilter: (state) => {
+      return { ...state, ...initialFiltersState };
+    },
+    changePage: (state, { payload }) => {
+      state.page = payload;
+    },
+    clearAllJobsState: (state) => initialState
   },
   extraReducers: (builder) => {
     builder
@@ -38,6 +49,9 @@ const alljobSlice = createSlice({
       .addCase(allJob.fulfilled, (state, { payload }) => {
         state.isLoading = false;
         state.jobs = payload.jobs;
+        state.isLoading = false;
+        state.numOfPages = payload.numOfPages;
+        state.totalJobs = payload.totalJobs;
       })
       .addCase(allJob.rejected, (state, { payload }) => {
         state.isLoading = false;
@@ -59,8 +73,27 @@ const alljobSlice = createSlice({
       .addCase(editJob.rejected, (state, { payload }) => {
         state.isLoading = false;
         toast.error(payload);
+      })
+      .addCase(showStats.pending, (state) => {
+        state.isLoading = true;
+      })
+      .addCase(showStats.fulfilled, (state, { payload }) => {
+        state.isLoading = false;
+        state.stats = payload.defaultStats;
+        state.monthlyApplicationState = payload.monthlyApplications;
+      })
+      .addCase(showStats.rejected, (state, { payload }) => {
+        state.isLoading = false;
+        toast.error(payload);
       });
   }
 });
-export const { showLoading, hideLoading } = alljobSlice.actions;
+export const {
+  clearAllJobsState,
+  changePage,
+  showLoading,
+  hideLoading,
+  handleChange,
+  clearFilter
+} = alljobSlice.actions;
 export default alljobSlice.reducer;

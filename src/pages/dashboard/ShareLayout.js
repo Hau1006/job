@@ -1,4 +1,3 @@
-import React from "react";
 import { Outlet } from "react-router-dom";
 import { Navbar, SmallSideBar, BigSideBar } from "../../components";
 import Wrapper from "../../assets/wrappers/SharedLayout";

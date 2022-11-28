@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import Wrapper from "../assets/wrappers/LandingPage";
 import sorry from "../assets/images/not-found.svg";

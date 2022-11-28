@@ -1,4 +1,4 @@
-import customFetch from "../../utils/axios";
+import customFetch, { checkForUnauthorizedResponse } from "../../utils/axios";
 import { clearValues } from "../job/jobSlice";
 import { allJob } from "./alljobAction";
 import { hideLoading } from "./alljobSlice";
@@ -25,7 +25,7 @@ export const deleteJobThunk = async (url, thunkAPi) => {
     return res.data.msg;
   } catch (error) {
     thunkAPi.dispatch(hideLoading());
-    return thunkAPi.rejectWithValue(error.response.data.msg);
+    return checkForUnauthorizedResponse(error, thunkAPi);
   }
 };
 export const editJobThunk = async (url, job, thunkAPi) => {
@@ -35,6 +35,14 @@ export const editJobThunk = async (url, job, thunkAPi) => {
     return res.data.msg;
   } catch (error) {
     thunkAPi.dispatch(hideLoading());
-    return thunkAPi.rejectWithValue(error.response.data.msg);
+    return checkForUnauthorizedResponse(error, thunkAPi);
+  }
+};
+export const getStats = async (url, thunkAPi) => {
+  try {
+    const res = await customFetch.get(url, authHeader(thunkAPi));
+    return res.data;
+  } catch (error) {
+    return checkForUnauthorizedResponse(error, thunkAPi);
   }
 };
