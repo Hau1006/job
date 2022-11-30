@@ -1,5 +1,4 @@
 import customFetch, { checkForUnauthorizedResponse } from "../../utils/axios";
-import { logoutUser } from "../user/userSlice";
 import { clearValues } from "./jobSlice";
 
 export const createJobThunk = async (job, thunkAPi) => {
