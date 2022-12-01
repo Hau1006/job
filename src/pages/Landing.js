@@ -18,7 +18,7 @@ const Landing = () => {
           <p>
             Learning a little each day adds up. Research shows that students who make learning a
             habit are more likely to reach their goals. Set time aside to learn and get reminders
-            using your learning scheduler.
+            using your learning scheduler ONE DAY.
           </p>
           <Link to="/register" className="btn btn-hero">
             Login/Register
