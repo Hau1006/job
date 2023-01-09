@@ -1,4 +1,5 @@
 {
+  "// comment": "this is comment, in package.json this technique",
   "name": "job",
   "version": "0.1.0",
   "private": true,
