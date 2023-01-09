@@ -3,11 +3,14 @@ import { Link } from "react-router-dom";
 import main from "../assets/images/main.svg";
 import Wrapper from "../assets/wrappers/LandingPage";
 import { Logo } from "../components";
+import Seo from "../layout/seo";
 const Landing = () => {
   return (
     <Wrapper>
       <nav>
         <Logo />
+        {/* add Seo for pages */}
+        <Seo title="Home" description="Home page" />
       </nav>
       <div className="container page">
         {/* info */}
